@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Trail Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map { height: 100vh; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([36.5, -97.5], 6); // Centered around OK, TX, KS
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+        
+        var trails = [
+            {"name": "Central State Park", "lat": 35.65219, "lng": -97.3661, "hiking": true, "biking": true, "equestrian": false, "pets": true},
+            {"name": "Damsite", "lat": 35.65234, "lng": -97.36566, "hiking": true, "biking": true, "equestrian": false, "pets": true},
+            {"name": "Carl Reherman Park", "lat": 35.61996, "lng": -97.4077, "hiking": false, "biking": false, "equestrian": false, "pets": false},
+            {"name": "Edmond Park", "lat": 35.63745, "lng": -97.38924, "hiking": true, "biking": true, "equestrian": false, "pets": true},
+            {"name": "Nature Loop", "lat": 35.62402, "lng": -97.38941, "hiking": true, "biking": false, "equestrian": false, "pets": true},
+            {"name": "Spring Creek", "lat": 35.64211, "lng": -97.39189, "hiking": true, "biking": true, "equestrian": true, "pets": true},
+            {"name": "Copan Point", "lat": 36.88764, "lng": -95.94549, "hiking": true, "biking": false, "equestrian": false, "pets": true},
+            {"name": "Washington Cove", "lat": 36.5438, "lng": -95.56081, "hiking": true, "biking": false, "equestrian": false, "pets": true},
+            {"name": "Juniper Point", "lat": 33.85933, "lng": -96.83813, "hiking": true, "biking": true, "equestrian": false, "pets": true},
+            {"name": "Platter Flats", "lat": 33.92242, "lng": -96.54249, "hiking": true, "biking": true, "equestrian": false, "pets": false},
+            {"name": "Cedar Bayou", "lat": 33.84089, "lng": -96.84789, "hiking": true, "biking": false, "equestrian": false, "pets": true},
+            {"name": "Buncombe Creek", "lat": 33.5335, "lng": -96.4821, "hiking": true, "biking": false, "equestrian": false, "pets": true}
+        ];
+        
+        trails.forEach(function(trail) {
+            L.marker([trail.lat, trail.lng]).addTo(map)
+                .bindPopup(`<b>${trail.name}</b><br>
+                            Hiking: ${trail.hiking ? 'Yes' : 'No'}<br>
+                            Biking: ${trail.biking ? 'Yes' : 'No'}<br>
+                            Equestrian: ${trail.equestrian ? 'Yes' : 'No'}<br>
+                            Pets Allowed: ${trail.pets ? 'Yes' : 'No'}`);
+        });
+        
+        function onLocationFound(e) {
+            var radius = e.accuracy / 2;
+            L.marker(e.latlng).addTo(map)
+                .bindPopup("You are within " + radius + " meters from this point").openPopup();
+            L.circle(e.latlng, radius).addTo(map);
+        }
+        
+        function onLocationError(e) {
+            alert("Location access denied or unavailable.");
+        }
+        
+        map.locate({setView: true, maxZoom: 12, watch: true});
+        map.on('locationfound', onLocationFound);
+        map.on('locationerror', onLocationError);
+    </script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Central State Park",
+        "hiking": true,
+        "biking": true,
+        "equestrian": false,
+        "pets": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.3661,
+          35.65219
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Damsite",
+        "hiking": true,
+        "biking": true,
+        "equestrian": false,
+        "pets": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.36566,
+          35.65234
+        ]
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Carl Reherman Park",
+        "hiking": false,
+        "biking": false,
+        "equestrian": false,
+        "pets": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.4077,
+          35.61996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Edmond Park",
+        "hiking": true,
+        "biking": true,
+        "equestrian": false,
+        "pets": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.38924,
+          35.63745
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nature Loop",
+        "hiking": true,
+        "biking": false,
+        "equestrian": false,
+        "pets": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.38941,
+          35.62402
+        ]
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Spring Creek",
+        "hiking": true,
+        "biking": true,
+        "equestrian": true,
+        "pets": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.39189,
+          35.64211
+        ]
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Copan Point",
+        "hiking": true,
+        "biking": false,
+        "equestrian": false,
+        "pets": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.94549,
+          36.88764
+        ]
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Washington Cove",
+        "hiking": true,
+        "biking": false,
+        "equestrian": false,
+        "pets": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.56081,
+          36.5438
+        ]
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Juniper Point",
+        "hiking": true,
+        "biking": true,
+        "equestrian": false,
+        "pets": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.83813,
+          33.85933
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Platter Flats",
+        "hiking": true,
+        "biking": true,
+        "equestrian": false,
+        "pets": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.54249,
+          33.92242
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cedar Bayou",
+        "hiking": true,
+        "biking": false,
+        "equestrian": false,
+        "pets": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.84789,
+          33.84089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Buncombe Creek",
+        "hiking": true,
+        "biking": false,
+        "equestrian": false,
+        "pets": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.4821,
+          33.5335
+        ]
+      }
+    }
+  ]
+}
